@@ -1,4 +1,4 @@
-# convo-data-search
+# CONVERSATIONAL DATA SEARCH APPLICATION 
 
 Conversational Data Search — chat with CSVs, get text answers, tables, and charts.
 
