@@ -1,0 +1,48 @@
+/* client/src/styles/global.css */
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body {
+  background: #0b0f15;
+  color: #e6e9ef;
+  font-family: ui-sans-serif, system-ui, Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.app {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 16px;
+  height: 100vh;
+  padding: 16px;
+}
+.panel {
+  background: #0f1520;
+  border: 1px solid #1c2333;
+  border-radius: 12px;
+  padding: 16px;
+  overflow: auto;
+}
+.header {
+  display:flex; align-items:center; gap:12px; margin-bottom:12px;
+}
+.logo { width: 28px; height: 28px; }
+.h1 { font-size: 18px; font-weight: 700; margin: 0; }
+.uploadBox { position: sticky; top: 16px; background: transparent; padding-bottom: 12px; z-index:5; }
+.inputRow { display:flex; gap:8px; margin-top:12px; }
+.inputRow input[type="text"] { flex:1; background:#0b0f15; color:#e6e9ef; border:1px solid #243047; border-radius:8px; padding:10px 12px; }
+.inputRow button { background: linear-gradient(180deg,#f472b6,#e11d79); color:white; border:none; border-radius:8px; padding:10px 14px; cursor:pointer; }
+.inputRow button:disabled { opacity:0.6; cursor:not-allowed; }
+.table { width:100%; border-collapse: collapse; font-size: 13px; }
+.table th, .table td { border:1px solid #22324a; padding:6px 8px; text-align:left; }
+.table th { background:#111827; }
+.preview { font-size:12px; opacity:0.85; margin-bottom:8px; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+.chip { font-size:12px; padding:6px 8px; border:1px solid #2a3b5e; border-radius:999px; cursor:pointer; background:#0d1622; }
+.msg { padding:8px 10px; border-radius:10px; margin-bottom:8px; display:inline-block; max-width: 90%; }
+.msg.user { background:#19324a; border:1px solid #2a4563; align-self:flex-end; color:#fff; }
+.msg.bot { background:#141a26; border:1px solid #263049; color:#e6e9ef; }
+.resultPanel { margin-top:12px; }
+@media (max-width: 980px) {
+  .app { grid-template-columns: 1fr; }
+  .header img { display:none; }
+}
